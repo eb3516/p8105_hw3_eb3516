@@ -93,6 +93,16 @@ instacart |>
   knitr::kable(digits = 2)
 ```
 
+# Problem 2
+
+### Read in the data
+``` {r}
+data("brfss_smart2010")
+
+brfss_smart2010 =
+  brfss_smart2010 |>
+  as_tibble()
+```
 
 
 
