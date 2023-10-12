@@ -104,8 +104,18 @@ brfss_smart2010 =
   as_tibble()
 ```
 
+### Clean the data
+-format the data to use appropriate variable names
+-focus on the "Overall Health" topic
+-include only responses from excellent to poor
+-organize responses as a factor taking levels *ordered* from Poor- Excellent
 
+### Answer questions about the data
+-In 2002, which states were observed at 7 or more locations? What about in 2010?
+-Construct a dataset that is limited to Excellent responses and contains year, state, and a variable that averages the data_value across locations within a state. Make a spaghetti plot of this average value over time within a state (that is, make a plot showing a line for each state across years- the geom_line geometry and group aesthetic will help)
+-Make a two panel plot showing, for years 2006 and 2010, distribution of data_value for responses (poor to excellent) among locations in NY state.
 
+# Problem 3
 
 
 
