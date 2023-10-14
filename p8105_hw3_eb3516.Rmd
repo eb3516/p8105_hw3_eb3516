@@ -148,6 +148,21 @@ excellent_plot
 
 # Problem 3
 
+Clean & merge data
+```{r}
+demos_data=read_csv("nhanes_covar.csv") |>
+  janitor::clean_names() |>
+  mutate(
+    sex=1~"Male", 2~"Female",
+    education=1~"Less than high school", 2~"High school equivalent", 3~"More than high school",
+    education=factor(education, levels=c("Less than high school", "High school equivalent", "More than high school")) |>
+      filter(age >=21) |>
+      
+accel_data=read_csv("nhanes_accel.csv") |>
+  janitor::clean_names() |>
+
+combined=left_join(demos_data, accel_data, by"seqn")
+
 
 
 
